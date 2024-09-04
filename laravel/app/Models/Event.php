@@ -20,6 +20,12 @@ class Event extends Model
         'user_id',
     ];
 
+    protected $hidden = [
+        'user_id',
+        'created_at',
+        'updated_at',
+    ];
+
     public function user(): BelongsTo
     {
         return $this->belongsTo(User::class);
