@@ -1,0 +1,74 @@
+/* ============================================================= */
+/*                         CORE VARIABLES                        */
+/* ============================================================= */
+
+/* Cores principais */
+:root {
+    --color-primary: #3498db; /* Azul principal */
+    --color-secondary: #2ecc71; /* Verde secundário */
+    --color-accent: #f1c40f; /* Amarelo destaque */
+    --color-danger: #e74c3c; /* Vermelho para erros */
+    --color-background: #f4f4f9; /* Cor de fundo neutra */
+    --color-text: #333; /* Cor do texto principal */
+    --color-light-text: #777; /* Cor do texto leve */
+    --color-white: #fff; /* Branco */
+    --color-dark: #2c3e50; /* Cor escura */
+  }
+  
+  /* Tipografia */
+  :root {
+    --font-primary: 'Helvetica Neue', sans-serif;
+    --font-size-base: 16px;
+    --font-size-small: 14px;
+    --font-size-large: 20px;
+    --line-height: 1.5;
+  }
+  
+  /* Espaçamento */
+  :root {
+    --spacing-small: 8px;
+    --spacing-medium: 16px;
+    --spacing-large: 24px;
+    --spacing-xlarge: 32px;
+  }
+  
+  /* Bordas */
+  :root {
+    --border-radius: 4px;
+  }
+  
+  /* Sombra */
+  :root {
+    --box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  }
+  
+  /* ============================================================= */
+  /*                           BASE STYLES                         */
+  /* ============================================================= */
+  
+  /* Reset básico */
+  * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  /* Corpo da página */
+  body {
+    font-family: var(--font-primary);
+    font-size: var(--font-size-base);
+    line-height: var(--line-height);
+    color: var(--color-text);
+    background-color: var(--color-background);
+  }
+  
+  h1, h2, h3, h4, h5, h6 {
+    color: var(--color-dark);
+    margin-bottom: var(--spacing-medium);
+  }
+  
+  p {
+    margin-bottom: var(--spacing-medium);
+    color: var(--color-light-text);
+  }
+  
