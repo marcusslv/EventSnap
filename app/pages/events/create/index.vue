@@ -1,10 +1,9 @@
-<script>
+<script></script>
 
-</script>
 
 <template>
   <div>
-    <h1>Home Page</h1>
+    <h1>Create</h1>
   </div>
 </template>
 

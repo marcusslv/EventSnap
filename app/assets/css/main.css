@@ -4,16 +4,16 @@
 
 /* Cores principais */
 :root {
-    --color-primary: #3498db; /* Azul principal */
-    --color-secondary: #2ecc71; /* Verde secundário */
-    --color-accent: #f1c40f; /* Amarelo destaque */
-    --color-danger: #e74c3c; /* Vermelho para erros */
-    --color-background: #f4f4f9; /* Cor de fundo neutra */
-    --color-text: #333; /* Cor do texto principal */
-    --color-light-text: #777; /* Cor do texto leve */
-    --color-white: #fff; /* Branco */
-    --color-dark: #2c3e50; /* Cor escura */
-  }
+  --color-primary: #3498db; /* Azul principal */
+  --color-secondary: #2ecc71; /* Verde secundário */
+  --color-accent: #f1c40f; /* Amarelo destaque */
+  --color-danger: #e74c3c; /* Vermelho para erros */
+  --color-background: #f4f4f9; /* Cor de fundo neutra */
+  --color-text: #333; /* Cor do texto principal */
+  --color-light-text: #777; /* Cor do texto leve */
+  --color-white: #fff; /* Branco */
+  --color-dark: #2c3e50; /* Cor escura */
+}
   
   /* Tipografia */
   :root {
