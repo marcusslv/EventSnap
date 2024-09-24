@@ -38,7 +38,12 @@ class EventController extends Controller
 
     public function store(StoreEventRequest $request): JsonResponse
     {
-        $data = $request->validated();
+        $userLoggedId = 1; // TODO: Get user logged id
+        $validated = $request->validated();
+        $data = [
+            ...$validated,
+            "user_id" => $userLoggedId
+        ];
         $event = $this->event->create($data);
 
         return response()->json([

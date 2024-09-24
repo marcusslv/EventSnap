@@ -27,7 +27,6 @@ class StoreEventRequest extends FormRequest
             'description' =>  ['required', 'string'],
             'location' => ['required', 'string'],
             'date' => ['required', 'date'],
-            'user_id' => ['required', 'exists:users,id'],
         ];
     }
 }

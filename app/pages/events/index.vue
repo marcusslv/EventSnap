@@ -115,7 +115,6 @@ export default defineComponent({
   border-collapse: collapse;
 }
 
-
 thead {
   background-color: var(--color-dark);
   color: var(--color-white);
