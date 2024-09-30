@@ -22,11 +22,11 @@ class UpdateEventRequest extends FormRequest
     public function rules(): array
     {
         return [
-            'title' => ['nullable', 'string', 'max:255'],
-            'description' =>  ['nullable', 'string'],
-            'location' => ['nullable', 'string'],
-            'date' => ['nullable', 'date'],
-            'user_id' => ['nullable', 'exists:users,id'],
+            'title' => ['required', 'string', 'min:1',  'max:255'],
+            'description' =>  ['required', 'string', 'min:1'],
+            'location' => ['required', 'string', 'min:1'],
+            'date' => ['required', 'date'],
+            'user_id' => ['nullble', 'exists:users,id'],
         ];
     }
 }

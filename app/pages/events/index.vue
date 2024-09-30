@@ -27,6 +27,9 @@ export default defineComponent({
       }
 
       this.events = response.data.value
+    },
+    redirectPageEdit(event) {
+      useRouter().push({ name: 'events-id', params: { id: event.id } })
     }
   },
 })
@@ -51,6 +54,7 @@ export default defineComponent({
             <th>Date</th>
             <th>Event Location</th>
             <th>Photographer</th>
+            <th>Actions</th>
           </tr>
         </thead>
         <tbody>
@@ -69,6 +73,10 @@ export default defineComponent({
             </td>
             <td>
               {{ event.user.name }}
+            </td>
+
+            <td>
+              <button class="button" v-on:click.once="redirectPageEdit(event)">Edit</button>
             </td>
           </tr>
         </tbody>
@@ -127,7 +135,6 @@ table th {
 table td {
   padding: 16px;
 }
-
 
 .wrapper-events__content-empty {
   display: flex;

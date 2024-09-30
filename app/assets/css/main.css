@@ -72,8 +72,19 @@
     color: var(--color-light-text);
   }
 
-
-.error {
-  color: var(--color-danger);
-}
+  .error {
+    color: var(--color-danger);
+  }
   
+
+  .button {
+    display: inline-block;
+    padding: var(--spacing-small) var(--spacing-medium);
+    border-radius: var(--border-radius);
+    background-color: var(--color-primary);
+    color: var(--color-white);
+    text-decoration: none;
+    text-align: center;
+    cursor: pointer;
+    transition: background-color 0.2s;
+  }
