@@ -30,6 +30,37 @@ export default defineComponent({
     },
     redirectPageEdit(event) {
       useRouter().push({ name: 'events-id', params: { id: event.id } })
+    },
+    async removeEvent(event) {
+
+      useNuxtApp().$swal
+        .fire({
+          title: "Are you sure?",
+          text: "You won't be able to revert this!",
+          icon: "warning",
+          showCancelButton: true,
+          confirmButtonColor: "#3085d6",
+          cancelButtonColor: "#d33",
+          confirmButtonText: "Yes, delete it!"
+        }).then(async (result) => {
+          if (result.isDenied || result.isDismissed) {
+            return;
+          }
+
+          const response  = await useFetch(`http://localhost:8000/api/events/${event.id}`, {
+            method: 'DELETE',
+          });
+
+          if (response.status.value !== 'success') {
+              useNuxtApp().$swal.fire("Failed to delete event!", "", "error");
+
+              return
+          }
+
+          this.events = this.events.filter((item) => item.id !== event.id)
+
+          useNuxtApp().$swal.fire("Delete!", "", "success");
+        });
     }
   },
 })
@@ -77,6 +108,7 @@ export default defineComponent({
 
             <td>
               <button class="button" v-on:click.once="redirectPageEdit(event)">Edit</button>
+              <button class="button bg-danger" v-on:click.once="removeEvent(event)">Delete</button>
             </td>
           </tr>
         </tbody>

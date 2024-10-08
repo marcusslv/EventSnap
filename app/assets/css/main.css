@@ -81,10 +81,16 @@
     display: inline-block;
     padding: var(--spacing-small) var(--spacing-medium);
     border-radius: var(--border-radius);
+    border: 0 none;
     background-color: var(--color-primary);
     color: var(--color-white);
     text-decoration: none;
     text-align: center;
     cursor: pointer;
     transition: background-color 0.2s;
+    margin: 0 4px;
+  }
+
+  .bg-danger {
+    background-color: var(--color-danger);
   }
